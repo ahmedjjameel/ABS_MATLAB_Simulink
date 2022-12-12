@@ -97,6 +97,8 @@ Using a Matlab script (friction_slip_curves.m), for v=30 m/s, we can plot the va
 
 ![Fig4](https://user-images.githubusercontent.com/81799459/207165541-ced8b0ab-baca-4554-be05-6fa4ec0d240c.jpg)
 
+Figure 4: Friction coefficients for different road types
+
 
 From Figure 4, we can see that the maximum value of the friction coefficient decreases sharply for a road covered by snow or ice. Even if the value of the friction coefficient is not significantly lower for 100 % slip, preventing wheel lock improves vehicle maneuverability (steering).
 
