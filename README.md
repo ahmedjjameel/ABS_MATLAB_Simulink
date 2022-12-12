@@ -62,7 +62,9 @@ Wheel speed is obtained by integration of equation (9).
 ### Wheel slip
 The ABS system must control the wheel slip λ around an optimal target. The wheel slip is calculated as [1]:
 
-$λ=(v_v-〖r_w \times ω〗_v)/(v_v)$    &nbsp;  &nbsp;  (10)
+$λ=(v_v - r_w \times ω_v)/v_v$    &nbsp;  &nbsp;  (10)
+
+
 
 where $ω_v$ [rad/s] is the equivalent angular speed of the vehicle, equal with:
 
