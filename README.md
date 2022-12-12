@@ -111,6 +111,35 @@ $T_b = e^{-τs}  a/(s+a) T_ref$         (13)
 subject to the constraint that $0 < T_b < T_{b,sat}$.
 
 
+The first order lag (transfer function) has been implemented using an integrator, gain and summation/negation block rather than a Transfer Function Block (from the Continuous library). This has been done as the Transfer Function block does not allow vector signals as an input, but the current implementation does. Hence the model being developed can more easily be expanded to allow for 4-channels, i.e., one for each wheel on a four wheeled vehicle. A Transfer Function Block would preclude that from happening (without replacing the block).
+
+### The Controller Model
+There are many different potential implementations for the controller. Here a simple PI (proportional–integral) controller has been shown to be adequate. 
+The subsystem has been implemented and given a discrete sample rate of Ts = 5ms. Controller gains that have been determined to work reasonably well for the configuration chosen here are Kp = 1200 and Ki = 100000.
+
+### Simulation Results
+Once the model components have been implemented and connected, and the parameters defined, then the model may be simulated. The results for the current configuration are shown in Figure 9.
+
+![Fig9](https://user-images.githubusercontent.com/81799459/207167719-1426e380-182c-449c-9fe7-bd171957a9b5.jpg)
+
+
+The blue line in Figure 9 shows the vehicle longitudinal velocity and the red line shows the wheel’s linear velocity (calculated as the wheel radius multiplied by the angular velocity). When there is no wheel slip, the two lines are the same. When the red line is below the blue line there is wheel slip. Figure 9 shows that the vehicle is initially moving forward at 30m/s with no wheel slip. At T=0.2s a slip of λ = 0.1 is demanded, which is achieved by applying the brake to the wheel. Consequently, the vehicle decelerates reducing its speed down towards zero.
+
+
+References:
+
+[1]	Anti-lock braking system (ABS) modeling and simulation (Xcos), https://x-engineer.org/anti-lock-braking-system-abs-modeling-simulation-xcos/
+
+[2]	Simulink – Slip Control of a Quarter Model, https://www.goddardconsulting.ca/simulink-quarter-car-model.html
+
+[3]	J. R. Layne, K. M. Passino, and S. Yurkovich, Fuzzy learning control for antiskid braking systems, IEEE Trans. Contr. Syst. Technol., Volume. 1, pp. 122-129.
+
+[4]	Pacejka, H. B. and R. S. Sharp, Shear force developments by pneumatic tires in steady-state conditions: A review of modeling aspects. Vehicle Systems Dynamics 29, 409-422
+
+[5]	Burckhardt, M, Fahrwerktechnik: Radschlupf-Regelsysteme. Würzburg: Vogel Verlag.
+
+
+
 
 
 
