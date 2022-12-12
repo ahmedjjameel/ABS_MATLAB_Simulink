@@ -35,6 +35,7 @@ where$ m_v$ is the total vehicle mass in kg and g is the gravitational accelerat
 $F_i = m_v \times a_v = m_v \times v ̇_v$   (6)
 
 where $v_v$ is the vehicle speed in m/s. From equations (1), (5) and (6) the vehicle acceleration will be extracted as:
+
 $v ̇_v=1/m_v \times (-μ \times m_v \times g)$  (7)
 
 Vehicle speed is obtained by integration of equation (7).
