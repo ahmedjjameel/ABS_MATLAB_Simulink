@@ -108,7 +108,7 @@ Actuator dynamics, and particular time delays, are often critical to the design 
 
 $T_b = e^{-τs}  a/(s+a) T_ref$         (13)
 
-subject to the constraint that $0 < Tb < Tb_sat$.
+subject to the constraint that $0 < Tb < Tb_{sat}$.
 
 
 
