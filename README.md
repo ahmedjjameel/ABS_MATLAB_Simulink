@@ -84,14 +84,31 @@ Depending on the value of the coefficients A, B, C and D, the empirical formula 
 ![Table1](https://user-images.githubusercontent.com/81799459/207165072-e8153c2d-e438-4426-bbce-b7a5d67a119e.jpg)
 
 
-
-
 Using a Matlab script (friction_slip_curves.m), for v=30 m/s, we can plot the variation of the friction coefficient function of slip, for different road conditions.
 
 
+![Fig4](https://user-images.githubusercontent.com/81799459/207165541-ced8b0ab-baca-4554-be05-6fa4ec0d240c.jpg)
+
+
+From Figure 4, we can see that the maximum value of the friction coefficient decreases sharply for a road covered by snow or ice. Even if the value of the friction coefficient is not significantly lower for 100 % slip, preventing wheel lock improves vehicle maneuverability (steering).
+
+### Overview of the Complete Model
+The control loop developed in this study follows a very standard form. The controller, actuator and quarter car models are all in the feedforward path. The calculated wheel slip (which is to be controlled) is fed back and compared to a desired slip value, with the error fed into the controller. 
+
+As shown in Figure 5, the model is fully parameterized and all the parameters are created in the MATLAB workspace by executing the m-file QuarterCarParams.m which is done automatically when the model is opened, and this is achieved by specifying a PreLoadFcn for the model. The model is only valid for vehicle speeds above 1–2 m/s. Hence it includes a Stop Block which stops the simulation when the speed drops below a small value – in this case 0.5 m/s.
+
+### The Quarter Car Model
+The vehicle and wheel model used for the simulation is known in the literature as a quarter-car model. This means that a quarter of the vehicle mass is considered with only one wheel. Also, only the longitudinal vehicle dynamics is considered, disregarding the impact of the suspension system. This example uses a standard set of equations for the dynamics of a quarter car. It contains two continuous time states and is described by the set of non-linear equations (7) to (9). 
 
 
 
+
+### The Actuator Model
+Actuator dynamics, and particular time delays, are often critical to the design of a sufficiently accurate control algorithm. This example uses a simple first order lag in series with a time delay to model the actuator. In practice a second order model is almost always required, and often actuators have different responses when they are opening and closing, and hence need to be modeled in considerably more detail than is done here. The model for the actuator is given by Equation 13:
+
+$T_b = e^{-τs}  a/(s+a) T_ref$         (13)
+
+subject to the constraint that $0 < Tb < Tb_sat$.
 
 
 
