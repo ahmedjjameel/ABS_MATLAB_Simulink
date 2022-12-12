@@ -45,6 +45,18 @@ Vehicle speed is obtained by integration of equation (7).
 
 ![Fig2](https://user-images.githubusercontent.com/81799459/207160151-8cf57aa7-30dd-47b2-a68f-682ff79400c7.jpg)
 
+Figure 2: Acting forces during wheel braking [1].
+
+During braking, the driver applies a braking torque T_b in [Nm] to the wheels. The friction force F_f in [N] between the wheel and road creates an opposite torque with the wheel radius r_w in m. For simplification, we are going to consider that the wheel is rigid, and the normal force (road reaction) passes through the wheel hub, therefore doesn’t add an additional torque. We can write the equation of equilibrium for the wheel as:
+
+$J_w \times ω ̇_w=F_i \times r_w-T_b$       (8) 
+
+where J_w [kg·m2] is the wheel’s moment of inertia and ω_w [rad/s] is the angular speed of the wheel.        
+From equation (8) we can extract the expression of the wheel acceleration:
+
+ω ̇_w=1/J_w ∙(F_i∙r_w-T_b )      (9)
+
+Wheel speed is obtained by integration of equation (9).
 
 
 
