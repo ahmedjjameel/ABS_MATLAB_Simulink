@@ -80,6 +80,12 @@ $μ(λ,v)=[A(1-e^{-Bλ} )-Cλ] e^{-Dλv}$      &nbsp;  &nbsp;      (12)
 
 where λ is the wheel slip and A, B, C, D are the empirical coefficients. The Simulink model for the friction coefficients versus the wheel slip is shown in Figure 3.
 
+
+![Fig3](https://user-images.githubusercontent.com/81799459/207183318-25e418c0-1531-46aa-b208-e159715cdc90.jpg)
+
+Figure 3: The friction coefficient as a function of the wheel slip
+
+
 Depending on the value of the coefficients A, B, C and D, the empirical formula (12) can be used to represent the friction coefficient for different road types/states [5].
 
 
