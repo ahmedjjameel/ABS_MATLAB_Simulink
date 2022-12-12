@@ -43,4 +43,13 @@ Vehicle speed is obtained by integration of equation (7).
 ### Wheel model
 
 
+![Fig2](https://user-images.githubusercontent.com/81799459/207160151-8cf57aa7-30dd-47b2-a68f-682ff79400c7.jpg)
+
+
+
+
+
+
+
+
 
