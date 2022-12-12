@@ -30,7 +30,7 @@ Replacing (2) and (4) in (3) yields the expression of the friction force as:
 
 $F_f=-μ \times m_v \times g$   &nbsp;  &nbsp;    (5)   
 
-where$ m_v$ is the total vehicle mass in kg and g is the gravitational acceleration in $m⁄s^2$ . The inertia force is the product between the vehicle mass $m_v$ in kg and vehicle acceleration $a_v$ in $m/s^2$:
+where $m_v$ is the total vehicle mass in kg and g is the gravitational acceleration in $m⁄s^2$ . The inertia force is the product between the vehicle mass $m_v$ in kg and vehicle acceleration $a_v$ in $m/s^2$:
 
 $F_i = m_v \times a_v = m_v \times v ̇_v$  &nbsp;  &nbsp;  (6)
 
@@ -47,7 +47,7 @@ Vehicle speed is obtained by integration of equation (7).
 
 Figure 2: Acting forces during wheel braking [1].
 
-During braking, the driver applies a braking torque T_b in [Nm] to the wheels. The friction force F_f in [N] between the wheel and road creates an opposite torque with the wheel radius r_w in m. For simplification, we are going to consider that the wheel is rigid, and the normal force (road reaction) passes through the wheel hub, therefore doesn’t add an additional torque. We can write the equation of equilibrium for the wheel as:
+During braking, the driver applies a braking torque $T_b$ in [Nm] to the wheels. The friction force $F_f$ in [N] between the wheel and road creates an opposite torque with the wheel radius $r_w$ in m. For simplification, we are going to consider that the wheel is rigid, and the normal force (road reaction) passes through the wheel hub, therefore doesn’t add an additional torque. We can write the equation of equilibrium for the wheel as:
 
 $J_w \times ω ̇_w=F_i \times r_w-T_b$   &nbsp;  &nbsp;    (8) 
 
