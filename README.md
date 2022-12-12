@@ -59,6 +59,25 @@ $ω ̇_w = (1/J_w) \times (F_i \times r_w-T_b )$      (9)
 Wheel speed is obtained by integration of equation (9).
 
 
+### Wheel slip
+The ABS system must control the wheel slip λ around an optimal target. The wheel slip is calculated as [1]:
+
+$λ=(v_v-〖r_w \times ω〗_v)/(v_v)$    (10)
+
+where $ω_v$ [rad/s] is the equivalent angular speed of the vehicle, equal with:
+
+$ω_v=v_v/r_w$        (11)
+
+where $v_v$ [m/s] is the vehicle speed.
+
+### Friction coefficients calculation
+The friction coefficient between wheel and road depends on several factors, like wheel slip, vehicle speed, and the type of the road surface. For our simulation purpose, we are going to consider only the variation of the friction coefficient function on the longitudinal wheel slip. During braking, if the wheel slip is 100 %, the wheel is locked but the vehicle is still moving. At 0 % slip, the wheel and vehicle have the same speed [1]. The optimum friction coefficient (highest value) is obtained when the wheel slip is around 20 %. If the wheel slip enters the unstable area, the friction coefficient will decrease, and the wheel will lock causing skid and vehicle instability. For this example, the ABS systems will have to keep the wheel slip around 20 %, where friction coefficient has the highest values. 
+Several tire friction models describing the nonlinear behavior are reported in the literature. There are static models as well as dynamic models. The most reputed tire models are by Layne [3] and by Pacejka [4], also known as magic formula and it is derived heuristically from experimental data. In this study, the Burckhardt model [5] will be used, as it is particularly suitable for analytical purpose while retaining a good degree of accuracy in the description of the friction coefficient. The friction coefficients can be expressed as an empirical function, where the wheel slip is a function argument:
+
+$μ(λ,v)=[A(1-e^{-Bλ} )-Cλ] e^{-Dλv}$            (12)    
+
+where λ is the wheel slip and A, B, C, D are the empirical coefficients. The Simulink model for the friction coefficients versus the wheel slip is shown in Figure 3.
+
 
 
 
