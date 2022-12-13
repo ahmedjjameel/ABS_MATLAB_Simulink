@@ -105,7 +105,7 @@ From Figure 4, we can see that the maximum value of the friction coefficient dec
 ### Overview of the Complete Model
 The control loop developed in this study follows a very standard form. The controller, actuator and quarter car models are all in the feedforward path. The calculated wheel slip (which is to be controlled) is fed back and compared to a desired slip value, with the error fed into the controller. 
 
-As shown in Figure 5, the model is fully parameterized and all the parameters are created in the MATLAB workspace by executing the m-file QuarterCarParams.m which is done automatically when the model is opened, and this is achieved by specifying a PreLoadFcn for the model. The model is only valid for vehicle speeds above 1–2 m/s. Hence it includes a Stop Block which stops the simulation when the speed drops below a small value – in this case 0.5 m/s.
+As shown in Figure 5, the model is fully parameterized and all the parameters are created in the MATLAB workspace by executing the m-file QuarterCarParams.m which is done automatically when the model is opened, and this is achieved by specifying a PreLoadFcn for the model. 
 
 ### The Quarter Car Model
 The vehicle and wheel model used for the simulation is known in the literature as a quarter-car model. This means that a quarter of the vehicle mass is considered with only one wheel. Also, only the longitudinal vehicle dynamics is considered, disregarding the impact of the suspension system. This example uses a standard set of equations for the dynamics of a quarter car. It contains two continuous time states and is described by the set of non-linear equations (7) to (9). 
