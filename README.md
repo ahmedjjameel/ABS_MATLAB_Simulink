@@ -60,7 +60,7 @@ Wheel speed is obtained by integration of equation (9).
 
 
 ### Wheel slip
-The ABS system must control the wheel slip λ around an optimal target. The wheel slip is calculated as [1]:
+The ABS system must control the wheel slip λ around an optimal target. The wheel slip is calculated as [2]:
 
 $λ=(v_v - r_w \times ω_v)/v_v$    &nbsp;  &nbsp;  (10)
 
@@ -102,7 +102,7 @@ Figure 4: Friction coefficients for different road types
 
 From Figure 4, we can see that the maximum value of the friction coefficient decreases sharply for a road covered by snow or ice. Even if the value of the friction coefficient is not significantly lower for 100 % slip, preventing wheel lock improves vehicle maneuverability (steering).
 
-### Overview of the Complete Model
+### The Complete Model
 The control loop developed in this study follows a very standard form. The controller, actuator and quarter car models are all in the feedforward path. The calculated wheel slip (which is to be controlled) is fed back and compared to a desired slip value, with the error fed into the controller. 
 
 As shown in Figure 5, the model is fully parameterized and all the parameters are created in the MATLAB workspace by executing the m-file QuarterCarParams.m which is done automatically when the model is opened, and this is achieved by specifying a PreLoadFcn for the model. 
