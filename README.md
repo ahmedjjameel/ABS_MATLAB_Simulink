@@ -132,9 +132,9 @@ As shown in Figure 7, the model is fully parameterized and all the parameters ar
 ### 5.	Simulation Results
 Once the model components have been implemented and connected, and the parameters defined, then the model may be simulated. For our simulation example, we are going to use a vehicle with the following parameters:  Inertia=1 kgm2, wheel radius=0.32m, quarter vehicle mass=450kg, and the gravitational force=9.81 m/s2. The results for the current configuration are shown in Figure 8.
 
-![Fig8](https://user-images.githubusercontent.com/81799459/207429940-2644ccc7-29bb-4a8b-ae4a-daafcafada0c.jpg)
+![Fig8](https://user-images.githubusercontent.com/81799459/207435303-47cb7c90-69b9-414e-9505-f1d0219de5bf.jpg)
 
-Figure 9: The Simulation Results.
+Figure 8: The Simulation Results.
 
 The blue line in Figure 9 shows the vehicle longitudinal velocity and the red line shows the wheel’s linear velocity (calculated as the wheel radius multiplied by the angular velocity). When there is no wheel slip, the two lines are the same. When the red line is below the blue line there is wheel slip. Figure 9 shows that the vehicle is initially moving forward at 30m/s with no wheel slip. At T=0.2s a slip of λ = 0.1 is demanded, which is achieved by applying the brake to the wheel. Consequently, the vehicle decelerates reducing its speed down towards zero.
 
