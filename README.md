@@ -102,8 +102,6 @@ The vehicle and wheel model used for the simulation is known in the literature a
 Figure 5: Quarter Car Model Subsystem.
 
 
-
-
 ### 3.1. Actuator/Controller Model
 Actuator dynamics, and particular time delays, are often critical to the design of a sufficiently accurate control algorithm. This example uses a simple first order lag in series with a time delay to model the actuator. In practice a second order model is almost always required, and often actuators have different responses when they are opening and closing, and hence need to be modeled in considerably more detail than is done here. The model for the actuator is given by Equation 13:
 
@@ -115,7 +113,7 @@ The first order lag transfer function has been implemented using an integrator, 
 There are many different potential implementations for the controller. Here a simple PI (proportional–integral) controller has been shown to be adequate. The subsystem has been implemented and given a discrete sample rate of Ts = 5ms. Controller gains that have been determined to work reasonably well for the configuration chosen here are Kp = 1200 and Ki = 100000. The implementation of actuator/controller is shown in Figure 6.
 
 
-![Fig6](https://user-images.githubusercontent.com/81799459/207428852-81f33906-1c8c-4548-9cc6-c535def17083.jpg)
+![Fig6](https://user-images.githubusercontent.com/81799459/207434732-fbc4c0dd-63d7-4fa7-9892-69aebf19f9b4.jpg)
 
 Figure 6: The Actuator/Controller Subsystem.
 
@@ -124,7 +122,7 @@ Figure 6: The Actuator/Controller Subsystem.
 
 The control loop developed in this study follows a very standard form. The controller, actuator and quarter car models are all in the feedforward path. The calculated wheel slip (which is to be controlled) is fed back and compared to a desired slip value, with the error fed into the controller. This is shown in Figure 7.
 
-![Fig7](https://user-images.githubusercontent.com/81799459/207429227-149fbbca-81a1-4fd4-9eec-c7d4566b161b.jpg)
+![Fig7](https://user-images.githubusercontent.com/81799459/207434916-d02889a6-7fd4-42fa-9b35-d9e8d7c8a811.jpg)
 
 Figure 7: Quarter Car Slip Control Loop.
 
