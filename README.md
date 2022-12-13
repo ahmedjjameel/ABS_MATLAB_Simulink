@@ -97,7 +97,7 @@ Figure 4: Friction coefficients for different road types
 ### 3.	Quarter Car Model
 The vehicle and wheel model used for the simulation is known in the literature as a quarter-car model. This means that a quarter of the vehicle mass is considered with only one wheel. Also, only the longitudinal vehicle dynamics is considered, disregarding the impact of the suspension system. This example uses a standard set of equations for the dynamics of a quarter car. It contains two continuous time states and is described by the set of non-linear equations (7) to (9). The implementation of quarter car equations is shown in Figure 5. 
 
-![Fig5](https://user-images.githubusercontent.com/81799459/207428457-db78bccb-81c9-4472-b31f-6425038cbe96.jpg)
+![Fig5](https://user-images.githubusercontent.com/81799459/207432356-99c8ee41-748b-42bb-8b18-b2c57b634740.jpg)
 
 Figure 5: Quarter Car Model Subsystem.
 
