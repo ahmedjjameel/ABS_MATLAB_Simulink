@@ -146,11 +146,9 @@ References:
 
 [2]	Simulink – Slip Control of a Quarter Model, https://www.goddardconsulting.ca/simulink-quarter-car-model.html
 
-[3]	J. R. Layne, K. M. Passino, and S. Yurkovich, Fuzzy learning control for antiskid braking systems, IEEE Trans. Contr. Syst. Technol., Volume. 1, pp. 122-129.
+[3]	Pacejka, H. B. and R. S. Sharp, Shear force developments by pneumatic tires in steady-state conditions: A review of modeling aspects. Vehicle Systems Dynamics 29, 409-422
 
-[4]	Pacejka, H. B. and R. S. Sharp, Shear force developments by pneumatic tires in steady-state conditions: A review of modeling aspects. Vehicle Systems Dynamics 29, 409-422
-
-[5]	Burckhardt, M, Fahrwerktechnik: Radschlupf-Regelsysteme. Würzburg: Vogel Verlag.
+[4]	Burckhardt, M, Fahrwerktechnik: Radschlupf-Regelsysteme. Würzburg: Vogel Verlag.
 
 
 
