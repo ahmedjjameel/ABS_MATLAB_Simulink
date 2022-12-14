@@ -137,7 +137,7 @@ Once the model components have been implemented and connected, and the parameter
 
 Figure 8: The Simulation Results.
 
-The blue line in Figure 9 shows the vehicle longitudinal velocity and the red line shows the wheel’s linear velocity (calculated as the wheel radius multiplied by the angular velocity). When there is no wheel slip, the two lines are the same. When the red line is below the blue line there is wheel slip. Figure 9 shows that the vehicle is initially moving forward at 30m/s with no wheel slip. At T=0.2s a slip of λ = 0.1 is demanded, which is achieved by applying the brake to the wheel. Consequently, the vehicle decelerates reducing its speed down towards zero.
+The blue line in Figure 8 shows the vehicle longitudinal velocity and the red line shows the wheel’s linear velocity (calculated as the wheel radius multiplied by the angular velocity). When there is no wheel slip, the two lines are the same. When the red line is below the blue line there is wheel slip. Figure 8 shows that the vehicle is initially moving forward at 30m/s with no wheel slip. At T=0.2s a slip of λ = 0.1 is demanded, which is achieved by applying the brake to the wheel. Consequently, the vehicle decelerates reducing its speed down towards zero.
 
 
 References:
