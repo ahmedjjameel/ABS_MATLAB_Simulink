@@ -72,7 +72,7 @@ where $v_v$ [m/s] is the vehicle speed.
 
 ### 2.	Friction Coefficients Calculation
 The friction coefficient between wheel and road depends on several factors, like wheel slip, vehicle speed, and the type of the road surface. For our simulation purpose, we are going to consider only the variation of the friction coefficient function on the longitudinal wheel slip. During braking, if the wheel slip is 100 %, the wheel is locked but the vehicle is still moving. At 0 % slip, the wheel and vehicle have the same speed [1]. The optimum friction coefficient (highest value) is obtained when the wheel slip is around 20 %. If the wheel slip enters the unstable area, the friction coefficient will decrease, and the wheel will lock causing skid and vehicle instability. For this example, the ABS systems will have to keep the wheel slip around 20 %, where friction coefficient has the highest values. 
-Several tire friction models describing the nonlinear behavior are reported in the literature. There are static models as well as dynamic models. The most reputed tire models are by Layne [3] and by Pacejka [4], also known as magic formula and it is derived heuristically from experimental data. In this study, the Burckhardt model [5] will be used, as it is particularly suitable for analytical purpose while retaining a good degree of accuracy in the description of the friction coefficient. The friction coefficients can be expressed as an empirical function, where the wheel slip is a function argument:
+Several tire friction models describing the nonlinear behavior are reported in the literature. There are static models as well as dynamic models. The most reputed tire model is by Pacejka [3], also known as magic formula and it is derived heuristically from experimental data. In this study, the Burckhardt model [4] will be used, as it is particularly suitable for analytical purpose while retaining a good degree of accuracy in the description of the friction coefficient. The friction coefficients can be expressed as an empirical function, where the wheel slip is a function argument:
 
 $μ(λ,v)=[A(1-e^{-Bλ} )-Cλ] e^{-Dλv}$      &nbsp;  &nbsp;      (12)    
 
@@ -82,7 +82,7 @@ where λ is the wheel slip and A, B, C, D are the empirical coefficients. The Si
 
 Figure 3: The friction coefficient as a function of the wheel slip
 
-Depending on the value of the coefficients A, B, C and D, the empirical formula (12) can be used to represent the friction coefficient for different road types/states [3],[5].
+Depending on the value of the coefficients A, B, C and D, the empirical formula (12) can be used to represent the friction coefficient for different road types/states [3],[4].
 
 ![Table1](https://user-images.githubusercontent.com/81799459/207165072-e8153c2d-e438-4426-bbce-b7a5d67a119e.jpg)
 
