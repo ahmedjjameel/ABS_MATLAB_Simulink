@@ -50,7 +50,7 @@ During braking, the driver applies a braking torque $T_b$ in [Nm] to the wheels.
 
 $J_w \times ω ̇_w=F_i \times r_w-T_b$   &nbsp;  &nbsp;    (8) 
 
-where $J_w$ [&kg·m^2&] is the wheel’s moment of inertia and $ω_w$ [rad/s] is the angular speed of the wheel.        
+where $J_w$ [$kg·m^2$] is the wheel’s moment of inertia and $ω_w$ [rad/s] is the angular speed of the wheel.        
 From equation (8) we can extract the expression of the wheel acceleration:
 
 $ω ̇_w = (1/J_w) \times (F_i \times r_w-T_b )$   &nbsp;  &nbsp;   (9)
