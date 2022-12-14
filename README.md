@@ -122,7 +122,9 @@ Figure 6: The Actuator/Controller Subsystem.
 
 The control loop developed in this study follows a very standard form. The controller, actuator and quarter car models are all in the feedforward path. The calculated wheel slip (which is to be controlled) is fed back and compared to a desired slip value, with the error fed into the controller. This is shown in Figure 7.
 
-![Fig7](https://user-images.githubusercontent.com/81799459/207434916-d02889a6-7fd4-42fa-9b35-d9e8d7c8a811.jpg)
+
+
+![Fig7](https://user-images.githubusercontent.com/81799459/207521622-fe054c34-dcae-4f2c-b6b0-dfbedca80bc7.jpg)
 
 Figure 7: Quarter Car Slip Control Loop.
 
