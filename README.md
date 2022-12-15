@@ -88,11 +88,9 @@ Depending on the value of the coefficients A, B, C and D, the empirical formula 
 
 Using a Matlab script (friction_slip_curves.m), for v=30 m/s, we can plot the variation of the friction coefficient function of slip, for different road conditions. From Figure 4, we can see that the maximum value of the friction coefficient decreases sharply for a road covered by snow or ice. Even if the value of the friction coefficient is not significantly lower for 100 % slip, preventing wheel lock improves vehicle maneuverability (steering).
 
-
 ![Fig4](https://user-images.githubusercontent.com/81799459/207431601-9d207009-06d2-48d4-9cc0-2d7d601793f7.jpg)
 
 Figure 4: Friction coefficients for different road types
-
 
 ### 3.	Quarter Car Model
 The vehicle and wheel model used for the simulation is known in the literature as a quarter-car model. This means that a quarter of the vehicle mass is considered with only one wheel. Also, only the longitudinal vehicle dynamics is considered, disregarding the impact of the suspension system. This example uses a standard set of equations for the dynamics of a quarter car. It contains two continuous time states and is described by the set of non-linear equations (7) to (9). The implementation of quarter car equations is shown in Figure 5. 
@@ -100,7 +98,6 @@ The vehicle and wheel model used for the simulation is known in the literature a
 ![Fig5](https://user-images.githubusercontent.com/81799459/207432356-99c8ee41-748b-42bb-8b18-b2c57b634740.jpg)
 
 Figure 5: Quarter Car Model Subsystem.
-
 
 ### 3.1. PI Controller Model
 Actuator dynamics, and particular time delays, are often critical to the design of a sufficiently accurate control algorithm. This example uses a simple first order lag in series with a time delay to model the actuator. In practice a second order model is almost always required, and often actuators have different responses when they are opening and closing, and hence need to be modeled in considerably more detail than is done here. The model for the actuator is given by Equation 13:
@@ -112,16 +109,12 @@ subject to the constraint that $0 < T_b < T_{b,sat}$.
 The first order lag transfer function has been implemented using an integrator, gain and summation/negation block rather than a Transfer Function Block (from the Continuous library). This has been done as the Transfer Function block does not allow vector signals as an input, but the current implementation does. Hence the model being developed can more easily be expanded to allow for 4-channels, i.e., one for each wheel on a four wheeled vehicle. 
 There are many different potential implementations for the controller. Here a simple PI (proportional–integral) controller has been shown to be adequate. The subsystem has been implemented and given a discrete sample rate of Ts = 5ms. Controller gains that have been determined to work reasonably well for the configuration chosen here are Kp = 1200 and Ki = 100000. The implementation of actuator/controller is shown in Figure 6.
 
-
 ![Fig6](https://user-images.githubusercontent.com/81799459/207434732-fbc4c0dd-63d7-4fa7-9892-69aebf19f9b4.jpg)
 
 Figure 6: The PI Controller Subsystem.
 
-
 ### 4.	The Complete Model
-
 The control loop developed in this study follows a very standard form. The controller, actuator and quarter car models are all in the feedforward path. The calculated wheel slip (which is to be controlled) is fed back and compared to a desired slip value, with the error fed into the controller. This is shown in Figure 7.
-
 
 ![Fig7](https://user-images.githubusercontent.com/81799459/207522045-d90718f7-0aed-4277-85dd-0506bd3fe3c7.jpg)
 
@@ -140,7 +133,7 @@ Figure 8: The Simulation Results.
 The blue line in Figure 8 shows the vehicle longitudinal velocity and the red line shows the wheel’s linear velocity (calculated as the wheel radius multiplied by the angular velocity). When there is no wheel slip, the two lines are the same. When the red line is below the blue line there is wheel slip. Figure 8 shows that the vehicle is initially moving forward at 30m/s with no wheel slip. At T=0.2s a slip of λ = 0.1 is demanded, which is achieved by applying the brake to the wheel. Consequently, the vehicle decelerates reducing its speed down towards zero.
 
 
-References:
+#### References:
 
 [1]	Anti-lock braking system (ABS) modeling and simulation (Xcos), https://x-engineer.org/anti-lock-braking-system-abs-modeling-simulation-xcos/
 
